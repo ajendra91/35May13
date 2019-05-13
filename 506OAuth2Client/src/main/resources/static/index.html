@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="http://localhost:9090/app/oauth/authorize"
+      method="post">
+
+    <label>Enter Employee Id</label>
+    <input type="text" name="response_type" value="code" />
+    <input type="text" name="client_id" value="ci" />
+    <input type="text" name="redirect_uri" value="http://localhost:9091/auth/facebook" />
+    <input type="text" name="scope" value="write" />
+    <input type="SUBMIT" value="Get Employee info" />
+</form>
+
+
+<form action="http://localhost:9090/app/oauth/authorize"
+      method="post" modelAttribute="emp">
+    <p>
+        <label>Enter Employee Id</label>
+        <input type="text" name="response_type" value="code" />
+        <input type="text" name="client_id" value="ci" />
+        <input type="text" name="redirect_uri" value="http://localhost:9091/showEmployees" />
+        <input type="text" name="scope" value="read" />
+        <input type="SUBMIT" value="Get Employee info" />
+</form>
+
+</body>
+</html>
